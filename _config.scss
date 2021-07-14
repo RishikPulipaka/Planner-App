@@ -1,0 +1,24 @@
+$background-color-1: #a8c0ff;
+$background-color-2: #3f2b96;
+$background-gradient: linear-gradient(120deg, $background-color-1, $background-color-2);
+$background-gradient-reverse: linear-gradient(120deg, $background-color-2, $background-color-1);
+$color-1: white;
+$color-2: $background-color-2;
+$color-2-darkened: darken($color-2, 15%);
+$color-2-lightened: lighten($color-2, 15%);
+$color-3: $background-color-1;
+$color-3-darkened: darken($color-3, 15%);
+$color-3-lightened: lighten($color-3, 15%);
+$color-4: #41D980;
+$color-4-darkened: darken($color-4, 15%);
+$color-4-lightened: lighten($color-4, 15%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin easeTransition($duration) {
+    transition: all $duration ease !important;
+}

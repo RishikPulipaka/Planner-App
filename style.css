@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #a8c0ff, #3f2b96);
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+  min-height: 100vh !important;
+}
+
+header {
+  font-size: 1.5rem !important;
+}
+
+header, form {
+  min-height: 20vh !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+form input, form button {
+  padding: 0.5rem !important;
+  font-size: 2rem !important;
+  border: none !important;
+  background: white !important;
+}
+
+form button {
+  color: #a8c0ff !important;
+  background: white !important;
+  cursor: pointer !important;
+  -webkit-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
+}
+
+form button:hover {
+  background: #a8c0ff !important;
+  color: white !important;
+}
+
+.todo-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.todo-list {
+  min-width: 30% !important;
+  list-style: none !important;
+}
+
+.todo {
+  margin: 0.5rem !important;
+  background: white !important;
+  color: black !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
+}
+
+.todo li {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 !important;
+          flex: 1 !important;
+}
+
+.trash-btn, .complete-btn {
+  background: #3f2b96 !important;
+  color: white !important;
+  border: none !important;
+  padding: 1rem !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
+}
+
+.complete-btn {
+  background: #22ab5b !important;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem !important;
+}
+
+.fa-trash, .fa-check {
+  pointer-events: none !important;
+}
+
+.completed {
+  text-decoration: line-through !important;
+  opacity: 0.5 !important;
+}
+
+.fall {
+  -webkit-transform: translateX(20rem) !important;
+          transform: translateX(20rem) !important;
+  opacity: 0 !important;
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.select {
+  margin: 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+select {
+  color: #3f2b96 !important;
+  width: 10rem !important;
+  cursor: pointer !important;
+  padding: 1rem !important;
+}
+
+.select::after {
+  content: "\25BC" !important;
+  position: absolute !important;
+  background: #3f2b96 !important;
+  top: 0 !important;
+  right: 0 !important;
+  padding: 1rem !important;
+  pointer-events: none !important;
+  -webkit-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
+}
+
+.select:hover::after {
+  background: white !important;
+  color: #3f2b96 !important;
+}
+
+.home-btn {
+  background-color: #a8c0ff !important;
+  border: none !important;
+  position: absolute !important;
+  color: white !important;
+  width: 75px !important;
+  height: 37.5px !important;
+  left: 20px !important;
+  top: 20px !important;
+  cursor: pointer !important;
+  -webkit-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
+}
+
+.home-btn:hover {
+  background-color: #5c89ff !important;
+}
+
+#home-title {
+  font-size: 2rem !important;
+}
+
+.todo-btn, .calandar-btn {
+  color: white !important;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+}
+
+.row {
+  height: 200px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.col {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  width: 200px;
+  height: 100px;
+  border: 1px solid white !important;
+  font-size: 2rem !important;
+}
+
+.completed-shift {
+  -webkit-transform: translateX(-20rem);
+          transform: translateX(-20rem);
+}
+/*# sourceMappingURL=style.css.map */
