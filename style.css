@@ -12,11 +12,7 @@ body {
   min-height: 100vh !important;
 }
 
-header {
-  font-size: 1.5rem !important;
-}
-
-header, form {
+form, header {
   min-height: 20vh !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -29,14 +25,18 @@ header, form {
           align-items: center !important;
 }
 
-form input, form button {
+header {
+  font-size: 1.5rem !important;
+}
+
+form input, header input, form button, header button {
   padding: 0.5rem !important;
   font-size: 2rem !important;
   border: none !important;
   background: white !important;
 }
 
-form button {
+form button, header button {
   color: #a8c0ff !important;
   background: white !important;
   cursor: pointer !important;
@@ -44,7 +44,7 @@ form button {
   transition: all 0.3s ease !important;
 }
 
-form button:hover {
+form button:hover, header button:hover {
   background: #a8c0ff !important;
   color: white !important;
 }
@@ -61,7 +61,7 @@ form button:hover {
           align-items: center !important;
 }
 
-.todo-list {
+.todo-container .todo-list {
   min-width: 30% !important;
   list-style: none !important;
 }
@@ -89,17 +89,13 @@ form button:hover {
           flex: 1 !important;
 }
 
-.trash-btn, .complete-btn {
-  background: #3f2b96 !important;
+.complete-btn {
+  background: #22ab5b !important;
   color: white !important;
   border: none !important;
   padding: 1rem !important;
   cursor: pointer !important;
   font-size: 1rem !important;
-}
-
-.complete-btn {
-  background: #22ab5b !important;
 }
 
 .todo-item {
@@ -115,7 +111,7 @@ form button:hover {
   opacity: 0.5 !important;
 }
 
-.fall {
+.remove {
   -webkit-transform: translateX(20rem) !important;
           transform: translateX(20rem) !important;
   opacity: 0 !important;
@@ -127,36 +123,10 @@ select {
   appearance: none !important;
   outline: none !important;
   border: none !important;
-}
-
-.select {
-  margin: 1rem !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-select {
   color: #3f2b96 !important;
   width: 10rem !important;
   cursor: pointer !important;
   padding: 1rem !important;
-}
-
-.select::after {
-  content: "\25BC" !important;
-  position: absolute !important;
-  background: #3f2b96 !important;
-  top: 0 !important;
-  right: 0 !important;
-  padding: 1rem !important;
-  pointer-events: none !important;
-  -webkit-transition: all 0.3s ease !important;
-  transition: all 0.3s ease !important;
-}
-
-.select:hover::after {
-  background: white !important;
-  color: #3f2b96 !important;
 }
 
 .home-btn {
@@ -181,7 +151,7 @@ select {
   font-size: 2rem !important;
 }
 
-.todo-btn, .calandar-btn {
+.todo-btn, .calendar-btn {
   color: white !important;
 }
 
@@ -198,7 +168,7 @@ select {
   height: 400px;
 }
 
-.row {
+.container .row {
   height: 200px;
   width: 500px;
   display: -webkit-box;
@@ -212,7 +182,7 @@ select {
           align-items: center;
 }
 
-.col {
+.container .row .col {
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,15 +195,44 @@ select {
           align-items: center;
 }
 
-.btn {
+.container .row .col .btn {
   width: 200px;
   height: 100px;
   border: 1px solid white !important;
   font-size: 2rem !important;
 }
 
-.completed-shift {
-  -webkit-transform: translateX(-20rem);
-          transform: translateX(-20rem);
+.calendar-input {
+  padding: 0.5rem !important;
+  font-size: 1.5rem !important;
+  border: none !important;
+  background: white !important;
+}
+
+.calendar-text-input {
+  padding: 0.5rem !important;
+  font-size: 0.75rem !important;
+  border: none !important;
+  background: white !important;
+}
+
+.calendar-form {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.calendar-inner-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*# sourceMappingURL=style.css.map */

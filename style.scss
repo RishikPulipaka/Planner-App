@@ -1,192 +1,190 @@
 @import 'config';
 
 body {
-    background: $background-gradient;
-    color: $color-1 !important;
-    font-family: 'Poppins', sans-serif !important;
-    min-height: 100vh !important;
+  background: $background-gradient;
+  color: $color-1 !important;
+  font-family: 'Poppins', sans-serif !important;
+  min-height: 100vh !important;
+}
+
+form {
+  min-height: 20vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 header {
-    font-size: 1.5rem !important;
+  @extend form;
+  
+  font-size: 1.5rem !important;
 }
 
-header,form {
-    min-height: 20vh !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
 
-form input, form button {
+form {
+  input {
     padding: 0.5rem !important;
     font-size: 2rem !important;
     border: none !important;
     background: $color-1 !important;
-}
+  }
 
-form button {
+  button {
+    @extend input;
+
     color: $color-3 !important;
     background: $color-1 !important;
     cursor: pointer !important;
     @include easeTransition(0.3s);
-}
 
-form button:hover {
-    background: $color-3 !important;
-    color: $color-1 !important;
+    &:hover {
+      background: $color-3 !important;
+      color: $color-1 !important;
+    }
+  }
 }
 
 .todo-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 
-.todo-list {
+  .todo-list {
     min-width: 30% !important;
     list-style: none !important;
+  }
 }
 
 .todo {
-    margin: 0.5rem !important;
-    background: $color-1 !important;
-    color: darken($color-1, 100%) !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    @include easeTransition(0.5s);
-}
+  margin: 0.5rem !important;
+  background: $color-1 !important;
+  color: darken($color-1, 100%) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  @include easeTransition(0.5s);
 
-.todo li {
+  li {
     flex: 1 !important;
-}
-
-.trash-btn, .complete-btn {
-    background: $color-2 !important;
-    color: $color-1 !important;
-    border: none !important;
-    padding: 1rem !important;
-    cursor: pointer !important;
-    font-size: 1rem !important;
+  }
 }
 
 .complete-btn {
-    background: $color-4-darkened !important;
+  background: $color-4-darkened !important;
+  color: $color-1 !important;
+  border: none !important;
+  padding: 1rem !important;
+  cursor: pointer !important;
+  font-size: 1rem !important;
 }
 
 .todo-item {
-    padding: 0rem 0.5rem !important;
+  padding: 0rem 0.5rem !important;
 }
 
 .fa-trash, .fa-check {
-    pointer-events: none !important;
+  pointer-events: none !important;
 }
 
 .completed {
-    text-decoration: line-through !important;
-    opacity: 0.5 !important;
+  text-decoration: line-through !important;
+  opacity: 0.5 !important;
 }
-.fall {
-    transform: 
-    translateX(20rem)
-    !important;
-    opacity: 0 !important;
+
+.remove {
+  transform: 
+  translateX(20rem)
+  !important;
+  opacity: 0 !important;
 }
 
 select {
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-    outline: none !important;
-    border: none !important;
-}
-
-.select {
-    margin: 1rem !important;
-    position: relative !important;
-    overflow: hidden !important;
-}
-
-select {
-    color: $color-2 !important;
-    width: 10rem !important;
-    cursor: pointer !important;
-    padding: 1rem !important;
-}
-
-.select::after {
-    content: "\25BC" !important;
-    position: absolute !important;
-    background: $color-2 !important;
-    top: 0 !important;
-    right: 0 !important;
-    padding: 1rem !important;
-    pointer-events: none !important;
-    @include easeTransition(0.3s);
-}
-
-.select:hover::after {
-    background: $color-1 !important;
-    color: $color-2 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  border: none !important;
+  
+  color: $color-2 !important;
+  width: 10rem !important;
+  cursor: pointer !important;
+  padding: 1rem !important;
 }
 
 .home-btn {
-    // background-color: darken($background-color-1, 10%) !important;
-    background-color: $color-3 !important;
-    border: none !important;
-    position: absolute !important;
-    color: $color-1 !important;
-    width: 75px !important;
-    height: 37.5px !important;
-    left: 20px !important;
-    top: 20px !important;
-    cursor: pointer !important;
-    @include easeTransition(0.3s);
-}
-.home-btn:hover {
+  // background-color: darken($background-color-1, 10%) !important;
+  background-color: $color-3 !important;
+  border: none !important;
+  position: absolute !important;
+  color: $color-1 !important;
+  width: 75px !important;
+  height: 37.5px !important;
+  left: 20px !important;
+  top: 20px !important;
+  cursor: pointer !important;
+  @include easeTransition(0.3s);
+
+  &:hover {
     background-color: $color-3-darkened !important;
+  }
 }
 
 #home-title {
-    font-size: 2rem !important;
+  font-size: 2rem !important;
 }
 
-.todo-btn, .calandar-btn {
-    color: $color-1 !important;
+.todo-btn, .calendar-btn {
+  color: $color-1 !important;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 
-.row {
+  .row {
     height: 200px;
     width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .col {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn {
+        width: 200px;
+        height: 100px;
+        border: 1px solid $color-1 !important;
+        font-size: 2rem !important;
+      }
+    }
+  }
 }
 
-.col {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.calendar-input {
+  padding: 0.5rem !important;
+  font-size: 1.5rem !important;
+  border: none !important;
+  background: $color-1 !important;
+}
+.calendar-text-input  {
+  padding: 0.5rem !important;
+  font-size: 0.75rem !important;
+  border: none !important;
+  background: $color-1 !important;
 }
 
-.btn {
-    width: 200px;
-    height: 100px;
-    border: 1px solid $color-1 !important;
-    font-size: 2rem !important;
+.calendar-form {
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-.completed-shift {
-    transform: 
-    translateX(-20rem)
-    ;
+.calendar-inner-form {
+  display: flex;
+  flex-direction: row;
 }
