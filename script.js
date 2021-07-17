@@ -2,20 +2,11 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
-const calendarInput = document.querySelector(".calendar-input");
-const calendarTextInput = document.querySelector(".calendar-text-input");
-const calendarButton = document.querySelector(".calendar-button");
-const calendarList = document.querySelector(".calendar-list");
-
-let complete_shift = 0;
 
 //Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
-document.addEventListener("DOMContentLoaded", getCalendars);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
-todoButton.addEventListener("click", addCalendar);
-todoList.addEventListener("click", deleteCalendar);
 
 //Functions
 
@@ -107,37 +98,4 @@ function getTodos() {
     //attach final Todo
     todoList.appendChild(todoDiv);
   });
-}
-
-function addCalendar() {
-  //Prevent natural behaviour
-  e.preventDefault();
-  //Create todo div
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo");
-  //Create list
-  const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
-  //Save to local - do this last
-  //Save to local
-  saveLocalTodos(todoInput.value);
-  //
-  newTodo.classList.add("todo-item");
-  todoDiv.appendChild(newTodo);
-  todoInput.value = "";
-  //Create Completed Button
-  const completedButton = document.createElement("button");
-  completedButton.innerHTML = `<i class="fas fa-check"></i>`;
-  completedButton.classList.add("complete-btn");
-  todoDiv.appendChild(completedButton);
-  //attach final Todo
-  todoList.appendChild(todoDiv);
-}
-
-function deleteCalendar() {
-
-}
-
-function getCalendars() {
-  
 }

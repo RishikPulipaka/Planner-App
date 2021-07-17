@@ -55,7 +55,13 @@ form {
   }
 }
 
-.todo {
+.calendar-list {
+  min-width: 30% !important;
+  list-style: none !important;
+}
+
+
+.todo, .calendar {
   margin: 0.5rem !important;
   background: $color-1 !important;
   color: darken($color-1, 100%) !important;
