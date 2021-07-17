@@ -88,7 +88,7 @@ form {
   padding: 0rem 0.5rem !important;
 }
 
-.fa-trash, .fa-check {
+.bi-check-lg {
   pointer-events: none !important;
 }
 
@@ -193,4 +193,8 @@ select {
 .calendar-inner-form {
   display: flex;
   flex-direction: row;
+}
+
+#home-title {
+  font-size: 3rem !important;
 }
