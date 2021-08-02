@@ -1,0 +1,36 @@
+$background-color-1: #0f2027;
+$background-color-2: #203a43;
+$background-color-3: #2c5364;
+$background-gradient: linear-gradient(
+  to left,
+  $background-color-3,
+  $background-color-2,
+  $background-color-1
+);
+
+$background-gradient-reverse: linear-gradient(
+  to left,
+  $background-color-3,
+  $background-color-2,
+  $background-color-1
+);
+$color-1: white;
+$color-2: $background-color-2;
+$color-2-darkened: darken($color-2, 15%);
+$color-2-lightened: lighten($color-2, 15%);
+$color-3: $background-color-1;
+$color-3-darkened: darken($color-3, 15%);
+$color-3-lightened: lighten($color-3, 15%);
+$color-4: #41d980;
+$color-4-darkened: darken($color-4, 15%);
+$color-4-lightened: lighten($color-4, 15%);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+@mixin easeTransition($duration) {
+  transition: $duration ease-in-out;
+}

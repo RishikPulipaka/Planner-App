@@ -1,9 +1,9 @@
-@import 'config';
+@import "config";
 
 body {
-  background: $background-gradient;
+  background: $background-gradient-reverse;
   color: $color-1 !important;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   min-height: 100vh !important;
 }
 
@@ -16,10 +16,9 @@ form {
 
 header {
   @extend form;
-  
+
   font-size: 1.5rem !important;
 }
-
 
 form {
   input {
@@ -60,8 +59,8 @@ form {
   list-style: none !important;
 }
 
-
-.todo, .calendar {
+.todo,
+.calendar {
   margin: 0.5rem !important;
   background: $color-1 !important;
   color: darken($color-1, 100%) !important;
@@ -88,7 +87,8 @@ form {
   padding: 0rem 0.5rem !important;
 }
 
-.bi-check-lg {
+.fa-trash,
+.fa-check {
   pointer-events: none !important;
 }
 
@@ -98,9 +98,7 @@ form {
 }
 
 .remove {
-  transform: 
-  translateX(20rem)
-  !important;
+  transform: translateX(20rem) !important;
   opacity: 0 !important;
 }
 
@@ -110,7 +108,7 @@ select {
   appearance: none !important;
   outline: none !important;
   border: none !important;
-  
+
   color: $color-2 !important;
   width: 10rem !important;
   cursor: pointer !important;
@@ -139,7 +137,8 @@ select {
   font-size: 2rem !important;
 }
 
-.todo-btn, .calendar-btn {
+.todo-btn,
+.calendar-btn {
   color: $color-1 !important;
 }
 
@@ -178,7 +177,7 @@ select {
   border: none !important;
   background: $color-1 !important;
 }
-.calendar-text-input  {
+.calendar-text-input {
   padding: 0.5rem !important;
   font-size: 0.75rem !important;
   border: none !important;
@@ -195,6 +194,22 @@ select {
   flex-direction: row;
 }
 
-#home-title {
-  font-size: 3rem !important;
+.clear-calendar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none !important;
+  border: none !important;
+  color: $background-color-1 !important;
+  @include easeTransition(0.2s);
+
+  &:hover {
+    background: none !important;
+    color: $background-color-2 !important;
+  }
+}
+
+.temp-delete {
+  @include easeTransition(0.2s);
+  opacity: 50%;
 }

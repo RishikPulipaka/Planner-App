@@ -28,7 +28,7 @@ function addTodo(e) {
   todoInput.value = "";
   //Create Completed Button
   const completedButton = document.createElement("button");
-  completedButton.innerHTML = `<i class="bi bi-check-lg"></i>`;
+  completedButton.innerHTML = `<i class="fas fa-check"></i>`;
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
   //attach final Todo
@@ -80,7 +80,7 @@ function getTodos() {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.forEach(function(todo) {
+  todos.forEach(function (todo) {
     //Create todo div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
@@ -92,7 +92,7 @@ function getTodos() {
     todoInput.value = "";
     //Create Completed Button
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = `<i class="bi bi-check-circle"></i>`;
+    completedButton.innerHTML = `<i class="fas fa-check"></i>`;
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
     //attach final Todo
