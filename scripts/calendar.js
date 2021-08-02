@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", getTodos);
 
 // Functions
 
-function addCalendarEvent() {
+function addCalendarEvent(e) {
+  e.preventDefault();
+
   const calendarDiv = document.createElement("div");
   calendarDiv.classList.add("todo");
 
